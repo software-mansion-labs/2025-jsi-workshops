@@ -34,7 +34,7 @@ export default function App() {
   };
 
   const task3 = () => {
-    console.log(conferenceName);
+    console.log(workshopsName);
   };
 
   const task4 = () => {
