@@ -9,7 +9,7 @@ NativeJSIWorkshopsModule.install();
 declare global {
   var answerToTheUltimateQuestionOfLifeTheUniverseAndEverything: number;
   var isWednesday: boolean;
-  var conferenceName: string;
+  var workshopsName: string;
   var myAwesomeArray: number[];
   var giveMeFive: () => number;
   var sumMeThis: (a: number, b: number) => number;
