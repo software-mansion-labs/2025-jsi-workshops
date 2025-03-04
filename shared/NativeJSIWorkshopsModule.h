@@ -26,7 +26,7 @@ public:
   void task12(jsi::Runtime& rt);
   void task13(jsi::Runtime& rt);
   void task14(jsi::Runtime& rt);
-  void task15(jsi::Runtime& rt);
+  void task15(jsi::Runtime& rt, jsi::Object simpleObject);
 };
 
 } // namespace facebook::react

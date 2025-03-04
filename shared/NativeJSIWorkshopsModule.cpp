@@ -20,7 +20,6 @@ void NativeJSIWorkshopsModule::install(jsi::Runtime& rt) {
   task12(rt);
   task13(rt);
   task14(rt);
-  task15(rt);
 }
 
 void NativeJSIWorkshopsModule::task1(jsi::Runtime& rt) {}
@@ -51,6 +50,6 @@ void NativeJSIWorkshopsModule::task13(jsi::Runtime& rt) {}
 
 void NativeJSIWorkshopsModule::task14(jsi::Runtime& rt) {}
 
-void NativeJSIWorkshopsModule::task15(jsi::Runtime& rt) {}
+void NativeJSIWorkshopsModule::task15(jsi::Runtime& rt, jsi::Object simpleObject) {}
 
 } // namespace facebook::react
