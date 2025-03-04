@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-JSIWorkshops.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-JSIWorkshops.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		761780ED2CA45674006654EE /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.mm */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C66CAA76A2E95FB517707994 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		F4DAFFDB2D76108500429159 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DAFFDA2D76107F00429159 /* main.m */; };
+		F4DAFFE32D76ED8B00429159 /* NativeJSIWorkshopsModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4DAFFE12D76ED8B00429159 /* NativeJSIWorkshopsModule.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +24,13 @@
 		3B4392A12AC88292D35C810B /* Pods-JSIWorkshops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSIWorkshops.debug.xcconfig"; path = "Target Support Files/Pods-JSIWorkshops/Pods-JSIWorkshops.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-JSIWorkshops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSIWorkshops.release.xcconfig"; path = "Target Support Files/Pods-JSIWorkshops/Pods-JSIWorkshops.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-JSIWorkshops.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSIWorkshops.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = JSIWorkshops/AppDelegate.swift; sourceTree = "<group>"; };
+		761780EC2CA45674006654EE /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = JSIWorkshops/AppDelegate.mm; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = JSIWorkshops/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F4DAFFD92D760F5000429159 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4DAFFDA2D76107F00429159 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4DAFFE02D76ED8B00429159 /* NativeJSIWorkshopsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeJSIWorkshopsModule.h; sourceTree = "<group>"; };
+		F4DAFFE12D76ED8B00429159 /* NativeJSIWorkshopsModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeJSIWorkshopsModule.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				761780EC2CA45674006654EE /* AppDelegate.swift */,
+				761780EC2CA45674006654EE /* AppDelegate.mm */,
+				F4DAFFDA2D76107F00429159 /* main.m */,
+				F4DAFFD92D760F5000429159 /* AppDelegate.h */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
@@ -70,6 +78,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				F4DAFFE22D76ED8B00429159 /* shared */,
 				13B07FAE1A68108700A75B9A /* JSIWorkshops */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -97,6 +106,16 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		F4DAFFE22D76ED8B00429159 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				F4DAFFE02D76ED8B00429159 /* NativeJSIWorkshopsModule.h */,
+				F4DAFFE12D76ED8B00429159 /* NativeJSIWorkshopsModule.cpp */,
+			);
+			name = shared;
+			path = ../shared;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -246,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				F4DAFFDB2D76108500429159 /* main.m in Sources */,
+				F4DAFFE32D76ED8B00429159 /* NativeJSIWorkshopsModule.cpp in Sources */,
+				761780ED2CA45674006654EE /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
