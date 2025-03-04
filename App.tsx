@@ -6,6 +6,23 @@ import NativeJSIWorkshopsModule from './specs/NativeJSIWorkshopsModule';
 
 NativeJSIWorkshopsModule.install();
 
+declare global {
+  var answerToTheUltimateQuestionOfLifeTheUniverseAndEverything: number;
+  var isWednesday: boolean;
+  var conferenceName: string;
+  var myAwesomeArray: number[];
+  var giveMeFive: () => number;
+  var sumMeThis: (a: number, b: number) => number;
+  var divideMeThis: (a: number, b: number) => number;
+  var reverseMeThis: (str: string) => string;
+  var sumMeThisObject: (obj: { firstNum: number, lastNum: number }) => number;
+  var sumMeThisArray: (arr: number[]) => number;
+  var nativeMap: (arr: number[], callback: (x: number) => number) => number[];
+  var runJsFunction: () => void;
+  var getDateObject: () => { day: number, month: number, year: number, now: number, hello: string };
+  var getInfinityObject: () => Record<string, any>;
+}
+
 export default function App() {
 
   const task1 = () => {};
